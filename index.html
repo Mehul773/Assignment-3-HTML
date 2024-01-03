@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-3-HTML</title>
+    <style>
+      * {
+        margin: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 150px;
+      }
+      input[type="checkbox"] {
+        margin-right: -2px;
+      }
+      textarea {
+        width: 150px;
+      }
+      .flex_vertical {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .flexbox {
+        display: flex;
+      }
+      .responsive_box {
+        display: flex;
+      }
+      select {
+        width: 170px;
+      }
+      @media only screen and (max-width: 518px) {
+        .flexbox {
+          flex-direction: column;
+        }
+        .responsive_box {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="flexbox">
+        <div class="flex_vertical">
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" />
+        </div>
+        <div class="flex_vertical">
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" />
+        </div>
+      </div>
+
+      <div class="flexbox">
+        <div class="flex_vertical">
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="flex_vertical">
+          <label for="contact_no">Contact Number:</label>
+          <input type="text" id="contact_no" />
+        </div>
+      </div>
+
+      <div class="flexbox">
+        <div class="flex_vertical">
+          <label for="username">Username:</label>
+          <input type="text" id="username" />
+        </div>
+        <div class="flex_vertical">
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+        </div>
+      </div>
+
+      <div class="flexbox">
+        <div class="flex_vertical">
+          <label for="address">Address:</label>
+          <textarea
+            rows="2"
+            cols="22"
+            type="text"
+            multiple
+            id="address"
+          ></textarea>
+        </div>
+        <div class="flex_vertical">
+          <div>
+            <label>Gender:</label>
+          </div>
+          <div class="responsive_box">
+            <div>
+              <input type="radio" id="male" name="gender" />
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" />
+              <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flexbox">
+        <div class="flex_vertical">
+          <label for="qualification">Qualification</label>
+          <select name="qualification" id="qualification">
+            <option value="">--select--</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+          </select>
+        </div>
+
+        <div class="flex_vertical">
+          <label for="experience">Experience</label>
+          <select name="experience" id="experience">
+            <option value="">--select--</option>
+            <option value="1">1 year</option>
+            <option value="2">2 year</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="responsive_box">
+        <div>Coding Languages:</div>
+        <div>
+          <input type="checkbox" id="c" name="c" />
+          <label for="c">C/C++</label>
+        </div>
+        <div>
+          <input type="checkbox" id="java" name="java" />
+          <label for="java">Java</label>
+        </div>
+        <div>
+          <input type="checkbox" id="c_sharp" name="c_sharp" />
+          <label for="c_sharp">C#</label>
+        </div>
+        <div>
+          <input type="checkbox" id="php" name="php" />
+          <label for="php">PHP</label>
+        </div>
+        <div>
+          <input type="checkbox" id="python" name="python" />
+          <label for="python">Python</label>
+        </div>
+      </div>
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
