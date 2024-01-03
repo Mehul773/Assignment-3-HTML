@@ -19,25 +19,20 @@
       textarea {
         width: 150px;
       }
+      select {
+        width: 170px;
+      }
+
       .flex_vertical {
         display: flex;
         flex-direction: column;
       }
-
       .flexbox {
         display: flex;
       }
-      .responsive_box {
-        display: flex;
-      }
-      select {
-        width: 170px;
-      }
-      @media only screen and (max-width: 518px) {
+
+      @media only screen and (max-width: 553px) {
         .flexbox {
-          flex-direction: column;
-        }
-        .responsive_box {
           flex-direction: column;
         }
       }
@@ -93,7 +88,7 @@
           <div>
             <label>Gender:</label>
           </div>
-          <div class="responsive_box">
+          <div class="flexbox">
             <div>
               <input type="radio" id="male" name="gender" />
               <label for="male">Male</label>
@@ -127,7 +122,7 @@
         </div>
       </div>
 
-      <div class="responsive_box">
+      <div class="flexbox">
         <div>Coding Languages:</div>
         <div>
           <input type="checkbox" id="c" name="c" />
